@@ -1,1 +1,36 @@
-<p>player-detail works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-4">
+      <h2>Player detail</h2>
+    </div>
+    <div class="col-4">
+      <a class="btn btn-primary" style="float: right" routerLink="/players">Player list</a>
+    </div>
+  </div>
+  <div class="col-2"></div>
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Name</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" value="{{player.name}}" readonly>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail2" class="form-label">Champ</label>
+          <input type="text" class="form-control" id="exampleInputEmail2" value="{{player.champ}}" readonly>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">KDA</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" value="{{player.kda}}" readonly>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword2" class="form-label">Description</label>
+          <input type="text" class="form-control" id="exampleInputPassword2" value="{{player.des}}" readonly>
+        </div>
+      </form>
+    </div>
+    <div class="col-2"></div>
+  </div>
+</div>
