@@ -47,7 +47,7 @@ export class PlayerEditComponent implements OnInit {
   update(id: number) {
     this.player = this.playerForm.value;
     this.playerService.update(id, this.player).subscribe(() => {
-      alert('Cập nhật thành công');
+      alert('Updated successful');
       this.router.navigate(['players']);
     });
 

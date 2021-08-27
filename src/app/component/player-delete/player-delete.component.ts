@@ -45,7 +45,7 @@ export class PlayerDeleteComponent implements OnInit {
 
   delete(id: number) {
     this.playerService.delete(id).subscribe(() => {
-      alert('Xóa thành công');
+      alert('Deleted successful!');
       this.router.navigate(['players']);
     });
   }
