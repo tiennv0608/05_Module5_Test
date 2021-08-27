@@ -1,1 +1,40 @@
-<p>player-delete works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <h2>Delete Player</h2>
+    </div>
+  </div>
+  <div class="col-2"></div>
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <form (ngSubmit)="delete(id)" [formGroup]="playerForm">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Name</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" formControlName="name" [value]="player.name" readonly>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail2" class="form-label">Champ</label>
+          <input type="text" class="form-control" id="exampleInputEmail2" formControlName="champ"
+                 [value]="player.champ" readonly>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">KDA</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" formControlName="kda"
+                 [value]="player.kda" readonly>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword2" class="form-label">Description</label>
+          <input type="text" class="form-control" id="exampleInputPassword2" formControlName="des"
+                 [value]="player.des" readonly>
+        </div>
+        <div class="mb-3 text-center">
+          <button class="btn btn-danger m-2">Xóa sách</button>
+          <a class="btn btn-success m-3" routerLink="/players">Thoát</a>
+        </div>
+      </form>
+    </div>
+    <div class="col-2"></div>
+  </div>
+</div>
