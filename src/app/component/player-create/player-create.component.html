@@ -1,1 +1,36 @@
-<p>player-create works!</p>
+<div class="container">
+  <div class="row text-center">
+    <div class="col-12">
+      <h2 class="jasmine-banner">Add new player</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <form (ngSubmit)="submit()" [formGroup]="playerGroup">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Name</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" formControlName="name">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail2" class="form-label">Champ</label>
+          <input type="text" class="form-control" id="exampleInputEmail2" formControlName="champ">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">KDA</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" formControlName="kda">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword2" class="form-label">Description</label>
+          <input type="text" class="form-control" id="exampleInputPassword2" formControlName="des">
+        </div>
+        <div class="mb-3 text-center">
+          <button type="submit" class="btn btn-primary m-2">Thêm sách mới</button>
+          <a routerLink="/books" class="btn btn-success m-3">Thoát</a>
+        </div>
+      </form>
+    </div>
+    <div class="col-2"></div>
+  </div>
+</div>
+
